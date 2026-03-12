@@ -1,0 +1,23 @@
+# Stage 1–2: Emission models & ray-tracing
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7
+jax[cuda12]>=0.4.20
+jaxlib>=0.4.20
+Pillow>=10.0
+
+# GR ray-tracing (install from source — see docs/setup.md)
+# pip install git+https://github.com/achael/kgeo.git
+# pip install git+https://github.com/aviadlevis/bhnerf.git
+
+# Stage 3: Gaussian Splatting
+torch>=2.1
+torchvision>=0.16
+gsplat>=1.0
+plyfile>=1.0
+tqdm>=4.65
+
+# Utilities
+imageio>=2.31
+opencv-python>=4.8
+h5py>=3.9

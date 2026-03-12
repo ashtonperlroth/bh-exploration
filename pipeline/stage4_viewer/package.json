@@ -1,0 +1,19 @@
+{
+  "name": "bh-explorer-viewer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Interactive 3D black hole Gaussian Splat viewer",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@playcanvas/engine": "^2.1.0",
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0",
+    "typescript": "^5.5.0"
+  }
+}

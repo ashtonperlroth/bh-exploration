@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Black Hole Explorer</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #000; color: #fff; font-family: system-ui, sans-serif; overflow: hidden; }
+    #canvas { width: 100vw; height: 100vh; display: block; }
+    #overlay {
+      position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%);
+      background: rgba(0,0,0,0.7); backdrop-filter: blur(10px);
+      padding: 0.75rem 1.5rem; border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.85rem; color: rgba(255,255,255,0.6);
+      pointer-events: none;
+    }
+    #loading {
+      position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 1rem; background: #000;
+    }
+    #loading .spinner {
+      width: 48px; height: 48px; border: 2px solid rgba(255,255,255,0.1);
+      border-top-color: #fff; border-radius: 50%; animation: spin 1s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <div id="loading">
+    <div class="spinner"></div>
+    <p>Loading black hole…</p>
+  </div>
+
+  <div id="overlay">
+    Drag to orbit · Scroll to zoom · Shift+drag to pan
+  </div>
+
+  <script type="module">
+    // TODO: Load .ply splat file and render with WebGL
+    // Options:
+    //   1. Use antimatter15/splat (lightweight, ~500 lines)
+    //   2. Use @playcanvas/engine with SuperSplat loader
+    //   3. Use gsplat.js
+    //
+    // For now, this is a placeholder.
+
+    const loading = document.getElementById('loading');
+
+    async function init() {
+      // const response = await fetch('/data/splats/blackhole.ply');
+      // const buffer = await response.arrayBuffer();
+      // ... initialize renderer, load splat, start render loop
+
+      // Remove loading screen when ready
+      // loading.style.display = 'none';
+
+      console.log('Black Hole Explorer — viewer not yet implemented');
+      loading.querySelector('p').textContent = 'Viewer coming soon — run the pipeline first';
+    }
+
+    init();
+  </script>
+</body>
+</html>

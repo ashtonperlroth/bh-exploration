@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+*.egg
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data artifacts (large files — use Git LFS or download scripts)
+data/training_views/*
+!data/training_views/.gitkeep
+data/splats/*
+!data/splats/.gitkeep
+*.ply
+*.ckpt
+*.pt
+*.pth
+
+# Node
+node_modules/
+pipeline/stage4_viewer/dist/
+pipeline/stage4_viewer/.next/
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# CUDA / build artifacts
+*.so
+*.o
+*.cu.o
